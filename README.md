@@ -1,1 +1,1 @@
-Effective Pancake
+Effective Pancake - Boilerplate for React Native app.
