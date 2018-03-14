@@ -1,16 +1,8 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
+import '../Config'
+import React, { Component } from 'react'
 
-import React, { Component } from 'react';
-import {
-  Platform,
-  StyleSheet,
-  Text,
-  View
-} from 'react-native';
+import { Provider } from 'react-redux'
+import createStore from './reducers'
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' +
