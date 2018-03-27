@@ -1,0 +1,22 @@
+{
+    "parser": "babel-eslint",
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended"
+    ],
+    "plugins": [
+        "react",
+        "flowtype"
+    ],
+    "rules": {
+        "react/prefer-stateless-function": [
+          2, { "ignorePureComponents": true }
+        ],
+        "semi": [2, "never"],
+        "flowtype/semi": [
+          2,
+          "always"
+        ],
+        "flowtype/no-dupe-keys": 2
+    }
+}

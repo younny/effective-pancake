@@ -1,4 +1,4 @@
-/*eslint-disable no-console*/
+/*eslint-disable no-console, no-undef*/
 
 import { is, asEffect } from 'redux-saga/utils'
 
@@ -363,7 +363,7 @@ function logFormatter() {
       if(IS_BROWSER) {
         add('%O', value)
       } else {
-        add('%s', require('util').inspect(value))
+        add('%s', require('redux-saga/utils').inspect(value))
       }
     }
   }
@@ -412,6 +412,7 @@ const logSaga = (...topEffects) => {
 if(globalScope) {
   globalScope.$$LogSagas = logSaga
 }
+/*eslint-enable*/
 
 // Export the snapshot-logging function for arbitrary use by external code.
 export { logSaga }

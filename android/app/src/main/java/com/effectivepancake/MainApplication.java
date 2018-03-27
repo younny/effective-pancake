@@ -1,6 +1,6 @@
 package com.effectivepancake;
 
-import android.support.annotation.Nullable;
+import android.support.annotation.NonNull;
 
 import com.facebook.react.ReactPackage;
 import com.reactnativenavigation.NavigationApplication;
@@ -15,6 +15,7 @@ public class MainApplication extends NavigationApplication {
     return BuildConfig.DEBUG;
   }
 
+
   protected List<ReactPackage> getPackages() {
     // Add additional packages you require here
     // No need to add RnnPackage and MainReactPackage
@@ -23,13 +24,13 @@ public class MainApplication extends NavigationApplication {
     );
   }
 
-  @Nullable
+  @NonNull
   @Override
   public List<ReactPackage> createAdditionalReactPackages() {
     return getPackages();
   }
 
-  @Nullable
+  @NonNull
   @Override
   public String getJSMainModuleName() {
     return "index";

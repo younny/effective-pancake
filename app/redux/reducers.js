@@ -1,5 +1,10 @@
 import { combineReducers } from 'redux'
+import startup from './startup'
+import login from './login'
 
-export default const reducers = combineReducers({
-    login: LoginReducer
-});
+const reducers = combineReducers({
+    startup,
+    login
+})
+
+export default reducers

@@ -1,14 +1,19 @@
-import Immutable from 'seamless-immutable'
+import Immutable from 'immutable'
 import Types from './actions'
 
 
-const initialState = Immutable({
+/*
+TODO.
+Immutable.List, Map, OrderedMap, Set, OrderedSet, Stack
+*/
+
+const initialState = Immutable.Map({
     auth: null,
     error: null,
     fetching: false
 })
 
-export default function reducer(state=initialState, action) {
+export default (state=initialState, action) => {
     switch(action.type) {
         case Types.LOGIN_REQUEST:
         return state.merge({ fetching: true })

@@ -1,10 +1,9 @@
-import { combineReducers } from 'redux'
-
 import configureStore from './configureStore'
-import rootSaga from '../actions/rootSaga'
-import reducers from '../actions/reducers'
+import rootSaga from '../redux/rootSaga'
+import reducers from '../redux/reducers'
 
 export default () => {
-    const { store, sagaManager, sagaMiddleware } = configureStore(reducers, rootSaga);
+    const { store } = configureStore(reducers, rootSaga)
+
     return store
 }
