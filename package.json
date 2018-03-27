@@ -39,11 +39,9 @@
       "**/?(*.)(spec|test).js?(x)"
     ],
     "testPathIgnorePatterns": [
-      "/node_modules/",
-      "__test__/setup.js"
+      "/node_modules/"
     ],
     "setupFiles": [
-      "./__test__/setup"
     ]
   }
 }
